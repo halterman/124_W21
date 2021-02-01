@@ -19,6 +19,7 @@ public class AddNumbers {
 		System.out.println("AAA");
 		System.out.println("BBB");
 		System.out.println("CCC");
+		scan.close();
 	}
 
 }
