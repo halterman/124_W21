@@ -9,7 +9,6 @@ public class SimpleIfElse {
 			System.out.println("You entered " + num);
 		} else {
 			System.out.println(num + " is a negative number!");
-			System.out.println("Wow");
 		}
 		scan.close();
 
