@@ -2,10 +2,11 @@ public class DecimalToBinarySimpler {
 
 	public static void main(String[] args) {
 		// We will repair this!
-		int number = 0;
-		while (number < 10) {
+		int count = 0;
+		while (count < 1024) {
 			String bitString = "";
 			// Build the bit string
+			int number = count;
 			if (0 <= number && number < 1024) {
 				bitString += (char)('0' + number/512);
 				number %= 512;
@@ -28,9 +29,9 @@ public class DecimalToBinarySimpler {
 				bitString += (char)('0' + number/1);
 			}
 
-			System.out.println("[" + bitString + "]");
+			System.out.println(bitString);
 			
-			number++;
+			count++;
 		}
 	}
 
