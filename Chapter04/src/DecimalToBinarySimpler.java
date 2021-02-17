@@ -1,7 +1,6 @@
 public class DecimalToBinarySimpler {
 
 	public static void main(String[] args) {
-		// We will repair this!
 		int count = 0;
 		while (count < 1024) {
 			String bitString = "";

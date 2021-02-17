@@ -1,7 +1,6 @@
 public class DecimalToBinaryWithLoop {
 
 	public static void main(String[] args) {
-		// We will repair this!
 		int count = 0;
 		final int MAX = 8192;
 		while (count < MAX) {
