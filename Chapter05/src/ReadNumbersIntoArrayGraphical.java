@@ -2,11 +2,15 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
-public class ReadNumbersIntoArrayFromFile {
+public class ReadNumbersIntoArrayGraphical {
 	public static void main(String[] args) throws FileNotFoundException {
 		// Get the array's size 
-		File f = new File("data.text");
+		JFileChooser dialog = new JFileChooser();
+		dialog.showOpenDialog(null);
+		File f = dialog.getSelectedFile();
 		Scanner scan = new Scanner(f);
 		int numberOfEntries = scan.nextInt();
 		// Create the array
@@ -19,11 +23,10 @@ public class ReadNumbersIntoArrayFromFile {
 		scan.close();
 
 		// Print the array
-		for (int i = 0; i < numbers.length; i++) {
-			System.out.print(numbers[i] + " ");
-		}
-		System.out.println();
-		System.out.println(numbers);
 		System.out.println(Arrays.toString(numbers));
+//		String str = Arrays.toString(numbers);
+//		JOptionPane.showMessageDialog(null, str);
+		Plotter.plot(numbers, 800, 300);
+		
 	}
 }
