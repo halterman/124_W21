@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class AddFractions {
 
-	private static Scanner scan = new Scanner(System.in);
+	private static final Scanner scan = new Scanner(System.in);
 	
 	// This works only for non-negative integers
 	private static int gcd(int m, int n) {
@@ -30,6 +30,7 @@ public class AddFractions {
 		String[] parts = getNumbers();
 		numerator1 = Integer.parseInt(parts[0]);
 		denominator1 = Integer.parseInt(parts[1]);
+	
 		
 		// Grab the second fraction
 		parts = getNumbers();
