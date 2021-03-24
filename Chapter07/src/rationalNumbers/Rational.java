@@ -31,7 +31,7 @@ public class Rational {
 	 * @return returns the denominator of the {@code Rational} object
 	 */
 	public int getDenominator() {
-		return denominator;
+		return this.denominator;
 	}
 
 	public String toString() {
