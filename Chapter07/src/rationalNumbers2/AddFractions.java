@@ -32,13 +32,14 @@ public class AddFractions {
 		
 		
 		
-//		System.out.print("Please enter the fractions to add: ");
-//		int numerator1, denominator1, numerator2, denominator2;
-//		// Grab the first fraction
-//		String[] parts = getNumbers();
-//		numerator1 = Integer.parseInt(parts[0]);
-//		denominator1 = Integer.parseInt(parts[1]);
-//	
+		System.out.print("Please enter the fractions to add: ");
+		Rational fraction1, fraction2;
+		
+		// Grab the first fraction
+		String f1 = scan.next();
+		fraction1 = Rational.parseRational(f1);
+		System.out.println("fraction1 = " + fraction1);
+
 //		
 //		// Grab the second fraction
 //		parts = getNumbers();

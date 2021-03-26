@@ -3,15 +3,17 @@
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-15"/>
 	<item key="org.eclipse.jdt.ui.codeformatter.line_wrapping_tab_page.preview_line_width" value="40"/>
-	<item key="org.eclipse.jdt.uiformatter_page.last_focus_index" value="14"/>
+	<item key="org.eclipse.jdt.uiformatter_page.last_focus_index" value="7"/>
 	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width" value="1097"/>
 	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height" value="588"/>
 	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x" value="0"/>
 	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_y" value="0"/>
-	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_left_width" value="475"/>
-	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_rigth_width" value="582"/>
+	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_left_width" value="472"/>
+	<item key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_rigth_width" value="585"/>
 	<item key="org.eclipse.jdt.uiformatter_page.preference_tree_expansion" value="11.0..0.0.000.0.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0.0..00.0.0.0..00.0.0.0...00.0.0..000.0..0.0..000.0.0.0.0.0.0.0.0.0.0.0...00.0..0.."/>
-	<item key="org.eclipse.jdt.uiformatter_page.preference_scroll_position" value="145"/>
+	<item key="org.eclipse.jdt.uiformatter_page.preference_scroll_position" value="0"/>
+	<item key="ProjectSelectionDialog.show_all" value="true"/>
+	<item key="org.eclipse.jdt.ui.codeformatter.create_profile_dialog.open_edit" value="true"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>

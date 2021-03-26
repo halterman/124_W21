@@ -60,6 +60,13 @@ public class Rational {
 		int commonFactor = gcd(numerator, denominator);
 		return new Rational(numerator/commonFactor, denominator/commonFactor);
 	}
+	
+	public static Rational parseRational(String s) {
+	    String[] parts = s.split("/");
+	    return new Rational(Integer.parseInt(parts[0]),
+	                        Integer.parseInt(parts[1]));
+	    
+	}
 
 	public String toString() {
 		return numerator + "/" + denominator;
