@@ -14,6 +14,12 @@ public class Rational {
 	/** The denominator of the {@code Rational} object */
 	private int denominator;
 	
+	/** The fraction 0/1 */
+	public static final Rational ZERO = new Rational(0, 1);
+	
+	/** The fraction 1/1 */
+	public static final Rational ONE = new Rational(1, 1);
+	
 	// This works only for non-negative integers
 	private static int gcd(int m, int n) {
 		// This is NOT an ideal implementation
@@ -66,6 +72,23 @@ public class Rational {
 	    return new Rational(Integer.parseInt(parts[0]),
 	                        Integer.parseInt(parts[1]));
 	    
+	}
+	
+	public Rational add(Rational other) {
+		int newNumerator = this.numerator*other.denominator 
+		                   + other.numerator*this.denominator;
+		int newDenominator = this.denominator*other.denominator;
+		int factor = gcd(newNumerator, newDenominator);
+		return new Rational(newNumerator/factor, 
+		                    newDenominator/factor);
+	}
+
+	public Rational multiply(Rational other) {
+		int newNumerator = this.numerator*other.numerator;
+		int newDenominator = this.denominator*other.denominator;
+		int factor = gcd(newNumerator, newDenominator);
+		return new Rational(newNumerator/factor, 
+		                    newDenominator/factor);
 	}
 
 	public String toString() {
