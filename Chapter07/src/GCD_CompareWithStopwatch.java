@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class GCD_Compare {
+public class GCD_CompareWithStopwatch {
     
 	private static final Random rand = new Random();
     
@@ -47,26 +47,25 @@ public class GCD_Compare {
     public static void main(String[] args) {
         int[] arr = makeRandomArray(50000, 1000000);
         
-        long startTime, stopTime;
-        double elapsedTime;
+        Stopwatch timer = new Stopwatch();
         
         // Time gcd1
-        startTime = System.currentTimeMillis();
+        timer.start();
         for (int i = 1; i < arr.length; i++) {
             gcd1(arr[i - 1], arr[i]);
         }
-        stopTime = System.currentTimeMillis();
-        elapsedTime = (stopTime - startTime)/1000.0;
-        System.out.println("gcd1 time: " + elapsedTime + " sec");
+        timer.stop();
+        System.out.println(">>> gcd1 time: " + timer.elapsed() 
+                           + " sec");
 
         // Time gcd2
-        startTime = System.currentTimeMillis();
+        timer.start();
         for (int i = 1; i < arr.length; i++) {
             gcd2(arr[i - 1], arr[i]);
         }
-        stopTime = System.currentTimeMillis();
-        elapsedTime = (stopTime - startTime)/1000.0;
-        System.out.println("gcd2 time: " + elapsedTime + " sec");
+        timer.stop();
+        System.out.println(">>> gcd2 time: " + timer.elapsed() 
+                           + " sec");
 
     }
 
