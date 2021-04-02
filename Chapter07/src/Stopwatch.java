@@ -23,6 +23,9 @@ public class Stopwatch {
     }
     
     public double elapsed() {
+        // TODO: Need to fix this code.
+        // What if the stopwatch has never been started?  
+        // What if a running stopwatch has not been stopped?
         return (stopTime - startTime)/1000.0;
     }
 
