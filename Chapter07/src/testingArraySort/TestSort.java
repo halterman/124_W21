@@ -38,6 +38,22 @@ class TestSort {
         assertArrayEquals(sorted, arr);
     }
     
+    private static void sortNull() {
+        ArraySort.sort(null);
+    }
+
+    @Test
+    void testSortWithNullArray() {
+        assertThrows(IllegalArgumentException.class,
+                     TestSort::sortNull);
+    }
+
+    @Test
+    void testSortWithNullArrayLambda() {
+        assertThrows(IllegalArgumentException.class,
+                     () -> { ArraySort.sort(null); } );
+    }
+
     @Test
     void testCountEvens1() {
         int[] arr = {0, 4, 5, 23, 23, 67, 120};

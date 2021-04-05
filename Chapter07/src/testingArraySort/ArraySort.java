@@ -25,8 +25,12 @@ public class ArraySort {
 	/**
 	 * Sorts an integer array into non-decreasing (ascending) order
 	 * @param a the array to sort
+	 * @throws IllegalArgumentException if the parameter is null
 	 */
 	public static void sort(int[] a) {
+	    if (a == null) {
+	        throw new IllegalArgumentException();
+	    }
 		for (int i = 0; i< a.length - 1; i++) {
 			int smallest = i;
 			for (int j = i + 1; j < a.length; j++) {
@@ -63,6 +67,10 @@ public class ArraySort {
 		System.out.println(Arrays.toString(arr));
 		sort(arr);
 		System.out.println(Arrays.toString(arr));
+		arr = null;
+		sort(arr);
+		
+		
 	}
 
 }
