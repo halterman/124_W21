@@ -7,7 +7,7 @@ package rationalNumbers3;
  * This is our third version.
  *
  */
-public class Rational {
+public class EnhancedRational {
 	/** The numerator of the {@code Rational} object */
 	private int numerator;
 
@@ -15,10 +15,10 @@ public class Rational {
 	private int denominator;
 	
 	/** The fraction 0/1 */
-	public static final Rational ZERO = new Rational(0, 1);
+	public static final EnhancedRational ZERO = new EnhancedRational(0, 1);
 	
 	/** The fraction 1/1 */
-	public static final Rational ONE = new Rational(1, 1);
+	public static final EnhancedRational ONE = new EnhancedRational(1, 1);
 	
 	/**
 	 * Computes the greatest common divisor of two 
@@ -43,7 +43,7 @@ public class Rational {
 	 * @param numerator the numerator of the object
 	 * @param denominator the denominator of the object
 	 */
-	public Rational(int numerator, int denominator) {
+	public EnhancedRational(int numerator, int denominator) {
 		this.numerator = numerator;
 		if (denominator == 0) {
 			throw new IllegalArgumentException();
@@ -67,36 +67,43 @@ public class Rational {
 		return this.denominator;
 	}
 	
-	public Rational reduce() {
+	public EnhancedRational reduce() {
 		int commonFactor = gcd(numerator, denominator);
-		return new Rational(numerator/commonFactor, denominator/commonFactor);
+		return new EnhancedRational(numerator/commonFactor, denominator/commonFactor);
 	}
 	
-	public static Rational parseRational(String s) {
+	public static EnhancedRational parseRational(String s) {
 	    String[] parts = s.split("/");
-	    return new Rational(Integer.parseInt(parts[0]),
+	    return new EnhancedRational(Integer.parseInt(parts[0]),
 	                        Integer.parseInt(parts[1]));
 	    
 	}
 	
-	public Rational add(Rational other) {
+	public EnhancedRational add(EnhancedRational other) {
 		int newNumerator = this.numerator*other.denominator 
 		                   + other.numerator*this.denominator;
 		int newDenominator = this.denominator*other.denominator;
 		int factor = gcd(newNumerator, newDenominator);
-		return new Rational(newNumerator/factor, 
+		return new EnhancedRational(newNumerator/factor, 
 		                    newDenominator/factor);
 	}
 
-	public Rational multiply(Rational other) {
+	public EnhancedRational multiply(EnhancedRational other) {
 		int newNumerator = this.numerator*other.numerator;
 		int newDenominator = this.denominator*other.denominator;
 		int factor = gcd(newNumerator, newDenominator);
-		return new Rational(newNumerator/factor, 
+		return new EnhancedRational(newNumerator/factor, 
 		                    newDenominator/factor);
 	}
 
 	public String toString() {
+	    if (numerator % denominator == 0) {
+	        return Integer.toString(numerator/denominator);
+	    } else if (numerator > denominator) {
+	        return numerator/denominator + " " 
+	                + numerator % denominator + "/" 
+	                + denominator; 
+	    }
 		return numerator + "/" + denominator;
 	}
 }

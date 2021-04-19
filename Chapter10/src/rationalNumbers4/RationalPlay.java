@@ -1,4 +1,4 @@
-package rationalNumbers3;
+package rationalNumbers4;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package rationalNumbers3;
+package rationalNumbers4;
 
 /**
  * The {@code Rational} class represents a mathematical 

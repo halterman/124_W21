@@ -1,4 +1,4 @@
-package rationalNumbers3;
+package rationalNumbers4;
 
 public class RationalToolkit {
     /**
