@@ -18,9 +18,11 @@ public class CustomColors {
         @Override
         public void paintComponent(Graphics g) {
            super.paintComponent(g);
+           Color c = new Color(0, 0, 256);
            double width = getWidth(), height = getHeight();
            // Show all the shades of pure red
            for (int red = 0; red < 256; red++) {
+               // Show all the shades of pure green
                for (int green = 0; green < 256; green++) {
                    g.setColor(new Color(red, green, 0));
                    g.fillRect((int)Math.round(red*width/255), 
